@@ -2,7 +2,7 @@
     "name": "shirdon/leaf",
     "description": "A Simple HTTP client",
     "keywords": ["http client", "curl"],
-    "homepage": "https://github.com/shirdonl/Leaf",
+    "homepage": "https://gitee.com/shirdonl/Leaf",
     "type": "library",
     "license": "MIT",
     "authors": [
