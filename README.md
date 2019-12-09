@@ -1,16 +1,16 @@
-# Leaf documentation
+# Leaf 文档
 
-Leaf is a simple and lightweight HTTP client which is easy to use. This page is 
-the index of the documentation. Please use the table of contents below to start
-reading. 
 
-## Browser
+Leaf是一个简单而轻量级的HTTP客户端，易于使用。此页是文档的索引。请使用下面的目录开始阅读。 
 
-The Browser is the high-level object to send HTTP requests. Main focus is on simplicity. 
+## 浏览器对象：Browser
 
-When a `Browser` in constructed you have to select a [Client](/doc/client.md) to use. The 
-`FileGetContents` client is used by default. See example of how
-to use the Bowser: 
+
+浏览器是发送HTTP请求的高级对象。主要关注的是简单性。
+
+在构造“Browser”时，必须选择要使用的[客户端]（/doc/Client.md）。这个
+
+`默认情况下使用FileGetContents`client。参见如下： 
 
 ```php
 use Leaf\Browser;
@@ -42,12 +42,12 @@ $request = new Request('GET', 'https://google.com/foo');
 $response = $browser->sendRequest($request)
 ```
 
-## Submit a form
+## 提交表单
 
-With Leaf you have built in support for posing forms. You could of course create your own PSR-7 request and posting it 
-as you normally would. But it might be easier to use the `Browser::submit()` function or the `FormRequestBuilder`. 
+有了Leaf，你已经建立了对请求表单的支持。你当然可以创建自己的PSR-7请求并发布，但使用Browser：：submit（）`函数或'FormRequestBuilder'可能更容易。
 
-Below is an example how to use `Browser::submit()` to upload a file. 
+
+下面是如何使用“Browser：：submit（）”上载文件的示例。
 
 ```php
 $browser->submitForm('https://example.com/foo', [
@@ -69,9 +69,10 @@ $browser->submitForm('https://example.com/foo', [
 ]);
 ``` 
 
-### Using the FormRequestBuilder
+### 使用 FormRequestBuilder
 
-If you have a large from or you want to build your request in a structured way you may use the `FormRequestBuilder`.
+
+如果您有一个大的from，或者您希望以结构化的方式构建您的请求，那么您可以使用“FormRequestBuilder”。 
 
 ```php
 use Leaf\Message\FormRequestBuilder;
