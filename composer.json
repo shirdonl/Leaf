@@ -1,5 +1,5 @@
 {
-    "name": "Shirdon/Leaf",
+    "name": "shirdon/leaf",
     "description": "A Simple HTTP client",
     "keywords": ["http client", "curl"],
     "homepage": "https://github.com/shirdonl/Leaf",
