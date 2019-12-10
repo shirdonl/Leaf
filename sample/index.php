@@ -6,7 +6,7 @@
  * Email: 823923263@qq.com
  */
 
-require "./vendor/autoload.php";
+require "../vendor/autoload.php";
 
 use \Leaf\Browser;
 use \Leaf\Client\FileGetContents;
