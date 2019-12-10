@@ -33,7 +33,7 @@ $response = $browser->delete('https://example.com');
 $response = $browser->request('GET', 'https://example.com');
 ```
 
-You do also have a function to send PSR-7 requests. 
+你也可是使用PSR-7提交请求功能: 
 
 ```php
 use Nyholm\Psr7\Request;
