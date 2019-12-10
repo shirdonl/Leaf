@@ -58,7 +58,7 @@ Below is an example how to use `Browser::submit()` to upload a file.
 
 ```php
 $browser->submitForm('https://example.com/foo', [
-    'user' => 'Kris Wallsmith',
+    'user' => 'Shirdon Liao',
     'image' => [
         'path'=>'/path/to/image.jpg'
       ],
@@ -67,7 +67,7 @@ $browser->submitForm('https://example.com/foo', [
 
 ```php
 $browser->submitForm('https://example.com/foo', [
-    'user[name]' => 'Kris Wallsmith',
+    'user[name]' => 'Shirdon Liao',
     'user[image]' => [
         'path'=>'/path/to/image.jpg',
         'filename' => 'my-image.jpg',
@@ -84,7 +84,7 @@ If you have a large from or you want to build your request in a structured way y
 use Leaf\Message\FormRequestBuilder;
 
 $builder = new FormRequestBuilder();
-$builder->addField('user[name]', 'Kris Wallsmith');
+$builder->addField('user[name]', 'Shirdon Liao');
 $builder->addFile('user[image]', '/path/to/image.jpg', 'image/jpg', 'my-image.jpg');
 $builder->addFile('cover-image', '/path/to/cover.jpg');
 
