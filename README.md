@@ -20,17 +20,17 @@ use Nyholm\Psr7\Factory\Psr17Factory;
 $client = new FileGetContents(new Psr17Factory());
 $browser = new Browser($client, new Psr17Factory());
 
-$response = $browser->get('https://example.com');
-$response = $browser->get('https://example.com', ['User-Agent'=>'Leaf']);
-$response = $browser->post('https://example.com', ['User-Agent'=>'Leaf'], 'http-post-body');
+$response = $browser->get('https://www.baidu.com');
+$response = $browser->get('https://www.baidu.com', ['User-Agent'=>'Leaf']);
+$response = $browser->post('https://www.baidu.com', ['User-Agent'=>'Leaf'], 'http-post-body');
 
-$response = $browser->head('https://example.com');
-$response = $browser->patch('https://example.com');
-$response = $browser->put('https://example.com');
-$response = $browser->delete('https://example.com');
+$response = $browser->head('https://www.baidu.com');
+$response = $browser->patch('https://www.baidu.com');
+$response = $browser->put('https://www.baidu.com');
+$response = $browser->delete('https://www.baidu.com');
 
 
-$response = $browser->request('GET', 'https://example.com');
+$response = $browser->request('GET', 'https://www.baidu.com');
 ```
 
 你也可是使用PSR-7提交请求功能: 
@@ -50,7 +50,7 @@ $response = $browser->sendRequest($request)
 下面是如何使用“Browser：：submit（）”上载文件的示例。
 
 ```php
-$browser->submitForm('https://example.com/foo', [
+$browser->submitForm('https://www.baidu.com/foo', [
     'user' => 'Shirdon Liao',
     'image' => [
         'path'=>'/path/to/image.jpg'
@@ -59,7 +59,7 @@ $browser->submitForm('https://example.com/foo', [
 ``` 
 
 ```php
-$browser->submitForm('https://example.com/foo', [
+$browser->submitForm('https://www.baidu.com/foo', [
     'user[name]' => 'Shirdon Liao',
     'user[image]' => [
         'path'=>'/path/to/image.jpg',
@@ -82,7 +82,7 @@ $builder->addField('user[name]', 'Shirdon Liao');
 $builder->addFile('user[image]', '/path/to/image.jpg', 'image/jpg', 'my-image.jpg');
 $builder->addFile('cover-image', '/path/to/cover.jpg');
 
-$browser->submitForm('https://example.com/foo', $builder->build());
+$browser->submitForm('https://www.baidu.com/foo', $builder->build());
 ``` 
 
 ---

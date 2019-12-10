@@ -13,7 +13,7 @@ use Leaf\Client\FileGetContents;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Request;
 
-$request = new Request('GET', 'https://example.com');
+$request = new Request('GET', 'https://www.baidu.com');
 
 $client = new FileGetContents(new Psr17Factory(), ['allow_redirects' => true]);
 $response = $client->sendRequest($request, ['timeout' => 4]);
@@ -46,7 +46,7 @@ $callback = function(RequestInterface $request, ResponseInterface $response = nu
     // Process the response
 };
 
-$request = new Request('GET', 'https://example.com');
+$request = new Request('GET', 'https://www.baidu.com');
 $client->sendAsyncRequest($request, array('callback' => $callback));
 ```
 
@@ -61,7 +61,7 @@ An array with Curl options.
 ```php
 use Nyholm\Psr7\Request;
 
-$request = new Request('GET', 'https://example.com');
+$request = new Request('GET', 'https://www.baidu.com');
 $client->sendAsyncRequest($request, array('curl' => [
     CURLOPT_FAILONERROR => false,
 ]));
@@ -79,7 +79,7 @@ serialization of the curl metadata information about the response.
 ```php
 use Nyholm\Psr7\Request;
 
-$request = new Request('GET', 'https://example.com');
+$request = new Request('GET', 'https://www.baidu.com');
 $response = $client->sendRequest($request, [
     'expose_curl_info' => true,
 ]);
